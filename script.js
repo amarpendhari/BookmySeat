@@ -11,6 +11,7 @@ populateUI();
 let ticketPrice = +movieSelect.value;
 
 // Save selected movie index and price
+
 function setMovieData(movieIndex, moviePrice) {
 
   localStorage.setItem("selectedMovieIndex", movieIndex);
@@ -29,16 +30,17 @@ function updateSelectedCount() {
 
   const selectedSeatsCount = selectedSeats.length;
 
+  //console.log("RIP");
+  console.log("Sushant Singh Rajput (21 January 1986 – 14 June 2020)")
+
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
 
 }
 
 // Get data from localstorage and populate UI
-function populateUI() {
 
-  console.log("RIP");
-  console.log("Sushant Singh Rajput (21 January 1986 – 14 June 2020)")
+function populateUI() {
 
   const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
 
@@ -60,6 +62,7 @@ function populateUI() {
 }
 
 // Movie select event
+
 movieSelect.addEventListener("change", e => {
 
   ticketPrice = +e.target.value;
@@ -69,6 +72,7 @@ movieSelect.addEventListener("change", e => {
 });
 
 // Seat click event
+
 container.addEventListener("click", e => {
 
   if (
@@ -83,12 +87,8 @@ container.addEventListener("click", e => {
 });
 
 // Initial count and total set
+
 updateSelectedCount();
-
-
-
-
-
 
 
 
